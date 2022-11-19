@@ -5,23 +5,12 @@ import LogIn from "../screens/LogIn";
 import SignUp from "../screens/SignUp";
 import Dashboard from "../screens/Dashboard";
 import Home from "../screens/Home";
+import AddCourse from "../screens/AddCourse";
+import ResultUpdate from "../screens/ResultUpdate";
+import AddData from "../screens/AddData";
+import Courses from "../screens/Courses";
 
 export default function AppRouter() {
-  const [links, setLinks] = useState([
-    {
-      to: "signUp",
-      label: "SignUp",
-    },
-    {
-      to: "logIn",
-      label: "LogIn ",
-    },
-    {
-      to: "dashboard",
-      label: "Dashboard",
-    },
-  ]);
-
   return (
     <>
       <BrowserRouter>
@@ -30,6 +19,10 @@ export default function AppRouter() {
           <Route path="logIn" element={<LogIn />} />
           <Route path="dashboard/*" element={<Dashboard />}></Route>
           <Route path="signUp" element={<SignUp />}></Route>
+          <Route path="add-course" element={<AddCourse />}></Route>
+          <Route path="result-update" element={<ResultUpdate />}></Route>
+          <Route path="add-data" element={<AddData />}></Route>
+          <Route path="courses" element={<Courses />}></Route>
         </Routes>
       </BrowserRouter>
     </>

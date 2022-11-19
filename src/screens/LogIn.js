@@ -19,7 +19,7 @@ function LogIn() {
       .then((success) => {
         setLoader(false);
         console.log(success);
-        navigate(`/${success.id}`);
+        navigate(`../dashboard`, { replace: true });
       })
       .catch((err) => {
         setLoader(false);

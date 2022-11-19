@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+import { Button, Switch, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import { useState } from "react";
 import { signUpUser } from "../config/firebaseMethods";
@@ -17,6 +17,7 @@ function SignUp() {
       password,
       userName: "Hira",
       contact: "123456",
+      category: "user",
     })
       .then((success) => {
         setLoader(false);

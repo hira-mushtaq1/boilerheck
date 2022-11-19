@@ -139,7 +139,7 @@ let getData = (nodeName) => {
   return new Promise((resolve, reject) => {
     const starCountRef = ref(db, `${nodeName}/`);
     onValue(starCountRef, (snapshot) => {
-      const data = Object.values(snapshot.val());
+      const data = snapshot.val();
       data ? resolve(data) : reject("Data not Found");
     });
   });
